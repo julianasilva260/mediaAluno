@@ -1,6 +1,6 @@
 qntdAluno = int(input("digite a quantidade de aluno:"))
 for i in range(qntdAluno):
-      print("Digite o nome:") 
+      print("Digite o nome:")
       nome = input()
       print("digite a 1º nota:")
       n1 = float(input())
@@ -13,7 +13,7 @@ for i in range(qntdAluno):
       media = (n1+n2+n3+n4)/4
       print("digite a quantidade de faltas do aluno:")   
       faltas = int(input())
-
+      print("o aluno", nome, "possui média igual a:", media, "e possui", faltas,"faltas")
 if media >= 8:
      print("O",nome, "esta aprovado com:",media)
 else:
@@ -27,5 +27,5 @@ else:
 if recuperacao < 5:
       print(nome,"esta reprovado por não alcançar a nota da recuperção e ficou com:",recuperacao)
 elif faltas > 31:
-      print(nome, "esta reprovado com",faltas)
+      print(nome, "esta reprovado com",faltas,"faltas")
 
