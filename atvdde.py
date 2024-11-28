@@ -13,19 +13,19 @@ for i in range(qntdAluno):
       media = (n1+n2+n3+n4)/4
       print("digite a quantidade de faltas do aluno:")   
       faltas = int(input())
-      print("o aluno", nome, "possui média igual a:", media, "e possui", faltas,"faltas")
+      
 if media >= 8:
-     print("O",nome, "esta aprovado com:",media)
-else:
-      print(nome,"esta reprovado e vai ter que fazer recuperação,por que tirou nota baixa",media)
-print("digite quanto o", "aluno tirou na recuperação")
-recuperacao = float(input())
-if recuperacao >= 5:
-      print("O aluno tirou",recuperacao ,"na recuperação")
-else:
-      print("o aluno não passou na recuperação,por que tirou",recuperacao)
-if recuperacao < 5:
-      print(nome,"esta reprovado por não alcançar a nota da recuperção e ficou com:",recuperacao)
-elif faltas > 31:
-      print(nome, "esta reprovado com",faltas,"faltas")
+      situacao = "aprovado"
+elif media >= 5:
+      recuperacao = float(input()) #ler a nota da recuperacao
+      if recuperacao > (10-media):
+            situacao = 'aprovado' 
+      else: 
+           print(nome ,"não passou na recuperação e está REPROVADO,com a nota:",recuperacao)
 
+if faltas > 31:
+       print(nome, "esta reprovado com",faltas,"faltas")
+print("O aluno passou!")
+
+
+print( "RELATORIO","\n" ,"nome:",nome,"\n", " notas:", n1, n2, n3, n4, "\n  média:", media, "\n faltas:", faltas,)
